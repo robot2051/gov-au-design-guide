@@ -79,6 +79,7 @@ module.exports = function(grunt) {
 			all: {
 				files: [
 					path.resolve(paths().source.css + '**/*.css'),
+					path.resolve(paths().source.scss + '**/*.scss'),
 					path.resolve(paths().source.styleguide + 'css/*.css'),
 					path.resolve(paths().source.patterns + '**/*.mustache'),
 					path.resolve(paths().source.patterns + '**/*.json'),
@@ -144,13 +145,6 @@ module.exports = function(grunt) {
 				}
 			}
 		}
-		sass: {
-			dist: {
-				files: {
-					'public/styleguide/css/styleguide.css' : 'source/sass/style.scss'
-				}
-			}
-		}
 	});
 
 	function paths () {
@@ -163,13 +157,13 @@ module.exports = function(grunt) {
 	//load the patternlab task
 	grunt.task.loadTasks('./builder/');
 
-	grunt.registerTask('default', ['patternlab', 'copy:main', 'copy:styleguide']);
+	grunt.registerTask('default', ['patternlab', 'sass', 'copy:main', 'copy:styleguide']);
 
 	//travis CI task
 	grunt.registerTask('travis', ['nodeunit', 'patternlab']);
 
 	grunt.registerTask('serve', ['patternlab', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
 
-	grunt.registerTask('build', ['nodeunit', 'concat'], 'default', ['sass']);
+	grunt.registerTask('build', ['nodeunit', 'concat']);
 	grunt.loadNpmTasks('grunt-sass');
 };
