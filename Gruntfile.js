@@ -136,6 +136,13 @@ module.exports = function(grunt) {
 		},
 		bsReload: {
 			css: path.resolve(paths().public.root + '**/*.css')
+		},
+		sass: {
+			dist: {
+				files: {
+					'public/styleguide/css/styleguide.css' : 'source/sass/style.scss'
+				}
+			}
 		}
 		sass: {
 			dist: {
