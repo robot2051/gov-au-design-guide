@@ -137,6 +137,13 @@ module.exports = function(grunt) {
 		bsReload: {
 			css: path.resolve(paths().public.root + '**/*.css')
 		}
+		sass: {
+			dist: {
+				files: {
+					'public/styleguide/css/styleguide.css' : 'source/sass/style.scss'
+				}
+			}
+		}
 	});
 
 	function paths () {
@@ -156,6 +163,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('serve', ['patternlab', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
 
-	grunt.registerTask('build', ['nodeunit', 'concat']);
-
+	grunt.registerTask('build', ['nodeunit', 'concat'], 'default', ['sass']);
+	grunt.loadNpmTasks('grunt-sass');
 };
