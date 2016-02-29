@@ -1,6 +1,8 @@
 # generated files #
 ###################
 public/
+public/*
+node_modules
 
 # Logs and databases #
 ######################
