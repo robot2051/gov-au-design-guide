@@ -1,0 +1,29 @@
+{
+  "clientName": "GOV.AU UDG",
+  "version": "0.1",
+  "language": "en",
+  "logo": "GOV.AU UDG v0.1",
+  "breakpoints": [
+    {
+      "id": "small",
+      "name": "Small",
+      "size": "420px"
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "size": "720px"
+    },
+    {
+      "id": "large",
+      "name": "Large",
+      "size": "1280px"
+    },
+    {
+      "id": "full",
+      "name": "Full",
+      "size": "100%"
+    }
+  ],
+  "date": "2016/3/15"
+}

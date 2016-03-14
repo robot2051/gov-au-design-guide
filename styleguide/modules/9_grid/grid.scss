@@ -1,0 +1,36 @@
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
+
+#top-row{
+    @include span-columns(12);
+    border: solid green 3px !important;
+}
+
+#red{
+    background-color: red;
+    @include span-columns(4 of 12);
+}
+
+#orange{
+    background-color: orange;
+    @include span-columns(4 of 12);
+}
+
+#yellow{
+    background-color: yellow;
+    @include span-columns(4 of 12);
+}
+
+#middle-row{
+    @include span-columns(12);
+}
+
+#green{
+    background-color: green;
+    @include span-columns(4 of 12);
+}
+
+#blue{
+    background-color: blue;
+    @include span-columns(8 of 12);
+}

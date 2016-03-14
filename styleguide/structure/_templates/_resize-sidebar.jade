@@ -1,0 +1,7 @@
+- var breakpoints = public.styleguide._data.breakpoints
+nav.huge-header__breakpoints.right
+	ul.huge-list--unstyled.huge-list--float
+		each breakpoint in breakpoints
+			li.huge-header__breakpoints__item
+				a(id=breakpoint.id, data-size=breakpoint.size, data-size-label=breakpoint.id).huge-header__breakpoints__item__link
+					span=breakpoint.name
