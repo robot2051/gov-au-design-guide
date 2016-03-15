@@ -4,7 +4,7 @@
 set -eo pipefail
 
 # Install npm package dependencies
-sudo npm install -g harp
+npm install -g harp
 
 cd styleguide/structure/_node-files && npm install && node write-date-exec.js
 cd ../../.. && harp compile
