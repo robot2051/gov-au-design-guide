@@ -4,13 +4,7 @@
 set -eo pipefail
 
 # Install npm package dependencies
-npm install harp
+sudo npm install -g harp
 
-# Install grunt command line tool locally
-# npm install grunt-cli
-
-# Build static site
-# ./node_modules/grunt-cli/bin/grunt
-
-cd styleguide/structure/_node-files && node write-date-exec.js
-cd ../../.. && node_modules/harp/bin/harp compile
+cd styleguide/structure/_node-files && npm install && node write-date-exec.js
+cd ../../.. && harp compile
