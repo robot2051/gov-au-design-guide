@@ -3,6 +3,7 @@
 public/
 public/*
 node_modules
+www
 
 # Logs and databases #
 ######################
