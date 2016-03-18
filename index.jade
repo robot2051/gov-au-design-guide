@@ -1,19 +1,24 @@
 extends styleguide/structure/_includes/_layout
 block styles
+	link(href='styleguide/assets/styles/vendor/normalize.css', rel='stylesheet')
 	link(href='styleguide/assets/styles/structure.css', rel='stylesheet')
 	link(href='styleguide/assets/styles/styleguide.css', rel='stylesheet')
+	
 
 block content
-	.header
-		p GOV.AU
-		p Universal design guide v1.0
+	header
+		.wrapper
+			p#govau-logo GOV.AU
+			#star
+			p Universal design guide v1.0
 	.ugd-into
-		h1 GOV.AU</br>universal design guide v1.0
-		p simpler, clearer, faster
-		p Digital Design standards for Australian Goverment
-		button view the standards
-		button download the components
-		small dowload the code and assets
+		.wrapper
+			h1 GOV.AU</br>Universal design guide v1.0
+			p simpler, clearer, faster
+			p Digital Design standards for Australian Goverment
+			button.button-blue View the standards
+			button.button-download Download the components
+			small dowload the code and assets
 
 block scripts
 	script(src="styleguide/structure/scripts/vendor/jquery-1.11.1.min.js")

@@ -1,0 +1,86 @@
+header {
+  background-color: #244A61;
+  height: 80px;
+  color: white;
+
+  .wrapper {
+    & > * {
+      display: inline-block;
+    }
+
+    p {
+      font-size: 24px;
+      letter-spacing: 0px;
+      line-height: 80px;
+
+      &:last-child {
+        padding-left: 94px;
+      }
+    }
+  }
+}
+
+.ugd-into {
+  height:calc(100vh - 80px);
+  background-image: linear-gradient(-134deg, #00BFE7 0%, #05E1F5 100%);
+  color: white;
+}
+
+#govau-logo {
+  font-size: 40.5px;
+}
+
+#star {
+  background-image: url("../images/star.svg");
+  height: 53px;
+  width: 53px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 14px;
+  margin-left: 13px;
+}
+
+.wrapper {
+  max-width: 64em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 700;
+  line-height:74px;
+  margin: 0;
+  padding-top: 179px;
+}
+
+button {
+  width: 243px;
+  height: 50px;
+  border: none;
+}
+
+.button-blue {
+  @include span-columns(3);
+  background: #244A61;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+}
+
+.button-download {
+  @include span-columns(4);
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0.18px;
+  font-weight:700;
+  width: 324px;
+}
+
+p {
+  font-family: OpenSans-Light;
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0;
+}
