@@ -1,7 +1,7 @@
 {
-  "name": "HugeStyleguideNodeRunner",
-  "version": "2.0.0",
-  "description": "",
+  "name": "Universal Design Guide",
+  "version": "1.0.0",
+  "description": "The UDG prodvides visualy designed responsive web elements and information on their acessibility and cross browser testing for use in goverment web products",
   "main": "watch.js",
   "dependencies": {
     "livereload": "^0.3.6",
@@ -16,6 +16,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Huge",
-  "license": "ISC"
+  "author": "DTO",
 }
