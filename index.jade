@@ -6,19 +6,16 @@ block styles
 	
 
 block content
-	header
-		.wrapper
-			p#govau-logo GOV.AU
-			#star
-			p Universal design guide v1.0
+	include styleguide/structure/_templates/_header.jade
 	.ugd-into
 		.wrapper
 			h1 GOV.AU</br>Universal design guide v1.0
-			p simpler, clearer, faster
-			p Digital Design standards for Australian Goverment
-			button.button-blue View the standards
-			button.button-download Download the components
-			small dowload the code and assets
+			p.index-description simpler, clearer, faster
+			p.index-description Digital Design standards for Australian Goverment
+			.row
+				a.button.button-blue(href="/styleguide.html", type="button") View the standards
+				a.button.button-download(href="" download) Download the components
+				small Download a zip file with code and assets
 
 block scripts
 	script(src="styleguide/structure/scripts/vendor/jquery-1.11.1.min.js")
