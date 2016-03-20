@@ -15,8 +15,8 @@ var StyleguideIndex = {
     this.$sidebarContent = $('.huge-sidebar__content');
     this.$sidebarLinks = $('.huge-sidebar__nav__item__link');
     this.$sidebarToggle = $('[class*="huge-sidebar__toggle"]');
-    this.$iframe = $('.huge-iframe-wrapper iframe');
-    this.$iframeContent = this.isChromeAndFileProtocol() ? null : $('.huge-iframe-wrapper iframe').contents();
+    this.$iframe = $('.iframe-wrapper iframe');
+    this.$iframeContent = this.isChromeAndFileProtocol() ? null : $('.iframe-wrapper iframe').contents();
 
     this.sidebarOpenedClass = 'opened';
     this.sidebarActiveLinkClass = 'active';

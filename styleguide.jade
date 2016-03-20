@@ -5,11 +5,13 @@ block styles
 
 block content
 	include styleguide/structure/_templates/_header.jade
-	include styleguide/structure/_templates/_sidebar.jade
-	.huge-iframe-wrapper
-		include styleguide/structure/_templates/_code-panel.jade
-	//- 	iframe(src="styleguide/styleguide.html", frameborder="0", height="100%", width="100%")
-	//- include styleguide/structure/_templates/_resize-sidebar.jade
+	include styleguide/structure/_templates/_navigation.jade
+	.wrapper
+		include styleguide/structure/_templates/_sidebar.jade
+		.iframe-wrapper
+			include styleguide/structure/_templates/_information-panel.jade
+			//- iframe(src="styleguide/styleguide.html", frameborder="0", height="100%", width="100%")
+			include styleguide/structure/_templates/_resize-sidebar.jade
 	
 
 block scripts

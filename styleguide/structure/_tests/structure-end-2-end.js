@@ -22,7 +22,7 @@ module.exports = {
             .assert.elementPresent('.huge-sidebar')
             .assert.elementPresent('.huge-header__welcome')
             .assert.elementPresent('.huge-header__breakpoints')
-            .assert.elementPresent('.huge-iframe-wrapper')
+            .assert.elementPresent('.iframe-wrapper')
             .assert.elementPresent('.huge-sidebar__content')
             .assert.elementPresent('.huge-sidebar__nav')
             .pause(4000)

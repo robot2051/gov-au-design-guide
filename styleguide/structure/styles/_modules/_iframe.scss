@@ -1,8 +1,9 @@
 body.opened {
-  .huge-iframe-wrapper {
-    left: 240px;
-    width: calc(100% - 240px);
-    max-width: calc(100% - 240px);
+  .iframe-wrapper {
+    @include span-columns(9);
+    //left: 240px;
+    //width: calc(100% - 240px);
+    //max-width: calc(100% - 240px);
   }
 }
 
@@ -18,7 +19,7 @@ body.opened {
   }
 }
 
-.huge-iframe-wrapper {
+.iframe-wrapper {
   overflow: hidden;
   height: 100%;
   width: 100%;
