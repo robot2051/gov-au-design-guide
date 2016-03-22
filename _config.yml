@@ -1,0 +1,38 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Universal Design Guide
+email: admin@digital.gov.au
+description: Universal Design Guide
+baseurl: "" # the subpath of your site, e.g. /blog
+url: 'http://universal-design-guide.apps.staging.digital.gov.au/' # the base hostname & protocol for your site
+
+exclude: ['README.markdown', 'Gemfile', 'Gemfile.lock']
+# Build settings
+markdown: kramdown
+
+assets:
+  compress:
+    css: true
+    js: true
+  cache: .asset-cache
+  prefix: "/cdn"
+  digest: true
+
+prose:
+  rooturl: '_includes/content'
+  siteurl: 'http://universal-design-guide.apps.staging.digital.gov.au/'
+  ignore:
+    - _config.yml
+    - /_assets
+    - /_data
+    - /_layouts
+    - /assets
+    - /bin
+    - /fonts
+    - /_posts
