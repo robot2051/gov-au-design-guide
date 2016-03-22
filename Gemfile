@@ -7,6 +7,7 @@ gem 'jekyll'
 gem 'neat'
 gem 'rack-jekyll'
 gem 'rack-ssl'
+gem 'slim'
 
 group :development do
   gem 'puma'
