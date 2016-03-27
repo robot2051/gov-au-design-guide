@@ -6,9 +6,8 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "normalize",
-        "bourbon",
-        "neat",
-;
+        "bourbon/bourbon",
+        "neat/neat";
 
 header {
   background-color: #244A61;
