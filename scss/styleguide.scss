@@ -157,6 +157,7 @@ nav.secondary {
   margin-top: 108px;
 
   ul {
+    list-style:none;
     li.nav-item {
       height:48px;
       line-height:48px;
@@ -178,6 +179,7 @@ nav.secondary {
   }
 
   ul.sub-nav {
+    padding-left:0;
     li{
       a{
         margin-left: 35px;
