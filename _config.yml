@@ -10,10 +10,12 @@ title: Universal Design Guide
 email: admin@digital.gov.au
 description: Universal Design Guide
 baseurl: "" # the subpath of your site, e.g. /blog
-url: 'http://universal-design-guide.apps.staging.digital.gov.au/' # the base hostname & protocol for your site
+url: 'http://universal-design-guide.apps.staging.digital.gov.au' # the base hostname & protocol for your site
+
+gems: [bourbon, neat]
 
 exclude: ['README.markdown', 'Gemfile', 'Gemfile.lock']
-# Build settings
+
 markdown: kramdown
 
 assets:

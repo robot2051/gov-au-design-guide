@@ -6,10 +6,9 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "normalize",
-        "bourbon/bourbon",
-        "neat/neat";
+@import "normalize";
+@import "bourbon";
+@import "neat";
 // end imports
 
 // style guide index
