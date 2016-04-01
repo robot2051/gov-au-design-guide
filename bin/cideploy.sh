@@ -5,4 +5,4 @@ set -e
 # Output the commands we run
 set -x
 
-cf push universal-design-guide -b staticfile_buildpack -p ./www -i 1
+cf push universal-design-guide -b staticfile_buildpack -p ./_site -i 1
