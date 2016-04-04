@@ -1,0 +1,85 @@
+.grid {
+  p {
+    text-align: center;
+  }
+
+  div {
+    height: 66px;
+    background-color: #E9E9E9;
+  }
+}
+
+#grid {
+  h1 {
+    font-size: 24px;
+    color: #232D35;
+  }
+
+  p {
+    font-size: 18px;
+    color: #000000;
+  }
+}
+
+section {
+  @include outer-container;
+  padding-bottom:83px;
+}
+
+.one {
+  @include span-columns(1);
+}
+
+.three {
+  @include span-columns(3);
+}
+
+.four {
+  @include span-columns(4);
+}
+
+.six {
+  @include span-columns(6);
+}
+
+.twelve{
+  @include span-columns(12);
+}
+
+.gutter {
+  height: 66px;
+  @include span-columns(1);
+
+  img {
+    position: relative;
+    left: -20px;
+  }
+}
+
+.large-desktop {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.desktop {
+  display: none;
+  @media (min-width: 1000px)and (max-width: 1199px) {
+    display: block;
+  }
+}
+
+.tablet {
+  display: none;
+  @media (min-width: 768px)and (max-width: 999px) {
+    display: block;
+  }
+}
+
+.mobile {
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
