@@ -13,8 +13,6 @@ input[type=text] {
   color: rgba(0,0,0,0.87);
   display: block;
   font-size: 1em;
-  font-style: normal;
-  font-weight: 400;
   height: 48px;
   line-height: 1.2142em;
   margin: 0;
@@ -88,7 +86,7 @@ select {
 fieldset {
   border: 0;
 
-  p{
+  p {
     display: inline-block;
   }
 
@@ -119,7 +117,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type="checkbox"],
-input[type="radio"], {
+input[type="radio"] {
   height: 1px;
   left: -10000px;
   margin: 4px 0 0;
@@ -133,6 +131,8 @@ input[type="radio"], {
     padding: 15px 0 15px 60px;
     position: relative;
     width: 100%;
+
+    @extend .form-input-focus;
   }
 }
 
