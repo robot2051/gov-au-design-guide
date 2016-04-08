@@ -3,7 +3,7 @@
     <a class="js-accordion-trigger" href='javascript:void(0)'>{{ include.infoPanelHeading }}</a>
     <ul class="submenu">
       <li>
-        <p>{{ include.infoPanelContent}}</p>
+        <p>{{ include.infoPanelContent | markdownify}}</p>
       </li>
     </ul>
   </li>
