@@ -170,6 +170,7 @@ nav.primary {
 
 nav.secondary {
   @include span-columns(3);
+
   margin-top: 108px;
 
   ul {
@@ -180,6 +181,7 @@ nav.secondary {
       border-top: 1px solid rgba(34,44,53,0.20);
       height: 48px;
       line-height: 48px;
+      padding-left: 16px;
 
       &:hover, &:active {
         background: #F0F3F5;
@@ -188,14 +190,6 @@ nav.secondary {
         letter-spacing: 0.07px;
         text-shadow: 1px 0 0 black;
       }
-
-      a {
-        margin-left: 16px;
-        text-decoration: none;
-        &:hover, &:active, &:visited {
-          color: #000000;
-        }
-      }
     }
   }
 
@@ -203,9 +197,21 @@ nav.secondary {
     padding-left: 0;
 
     li {
-      a {
-        margin-left: 35px;
-      }
+      padding-left: 35px;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid rgba(34,44,53,0.20);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+
+    &:hover, &:active, &:visited {
+      color: #000000;
+      text-decoration: none;
     }
   }
 }
