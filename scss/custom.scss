@@ -15,6 +15,7 @@
 @import "forms";
 @import "typography";
 @import "code-syntax";
+@import "tables";
 // end imports
 
 // style guide index
@@ -288,4 +289,84 @@ nav.secondary {
 .main-content {
   @include span-columns(9);
   padding-right: 40px;
+}
+
+.line-height {
+  margin: auto;
+  width:658px;
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+
+.font-variations {
+
+  p {
+    font-size: 32px;
+    color: #000000;
+    letter-spacing: 2.8px;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-family: OpenSans;
+    font-size: 14px;
+    color: rgba(34,44,53,0.60);
+    letter-spacing: 0.03px;
+  }
+
+  p:nth-child(2) {
+    font-family: OpenSans-Bold;
+  }
+
+  p:nth-child(4) {
+    font-family: OpenSans;
+  }
+
+  p:nth-child(6) {
+    font-family: OpenSans-Light;
+  }
+}
+
+.font-examples {
+
+  span {
+    font-size: 140px;
+    color: black;
+
+    &:first-child {
+      font-family: OpenSans-Bold;
+    }
+
+    &:nth-child(2){
+      font-family: OpenSans;
+      padding-left: 30px
+    }
+
+    &:nth-child(3){
+      font-family: OpenSans-Light;
+      padding-left: 30px
+    }
+  }
+}
+
+.display-type-1 {
+  font-family: OpenSans-Bold;
+  font-size: 58px;
+  color: #000000;
+  line-height: 68px;
+}
+
+.display-type-2 {
+  opacity: 0.93;
+  font-family: OpenSans;
+  font-size: 58px;
+  color: #000000;
+  line-height: 68px;
+}
+
+.display-type-heading {
+  font-family: OpenSans;
+  font-size: 36px;
+  color: #000000;
+  line-height: 40px;
 }
