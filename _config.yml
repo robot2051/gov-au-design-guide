@@ -6,9 +6,9 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Universal Design Guide
+title: Design Guide
 email: admin@digital.gov.au
-description: Universal Design Guide
+description: Design Guide
 baseurl: "" # the subpath of your site, e.g. /blog
 url: 'http://universal-design-guide.apps.staging.digital.gov.au' # the base hostname & protocol for your site
 
