@@ -15,6 +15,7 @@
 @import "forms";
 @import "typography";
 @import "code-syntax";
+@import "tables";
 // end imports
 
 // style guide index
@@ -169,6 +170,7 @@ nav.primary {
 
 nav.secondary {
   @include span-columns(3);
+
   margin-top: 108px;
 
   ul {
@@ -179,6 +181,7 @@ nav.secondary {
       border-top: 1px solid rgba(34,44,53,0.20);
       height: 48px;
       line-height: 48px;
+      padding-left: 16px;
 
       &:hover, &:active {
         background: #F0F3F5;
@@ -187,14 +190,6 @@ nav.secondary {
         letter-spacing: 0.07px;
         text-shadow: 1px 0 0 black;
       }
-
-      a {
-        margin-left: 16px;
-        text-decoration: none;
-        &:hover, &:active, &:visited {
-          color: #000000;
-        }
-      }
     }
   }
 
@@ -202,9 +197,21 @@ nav.secondary {
     padding-left: 0;
 
     li {
-      a {
-        margin-left: 35px;
-      }
+      padding-left: 35px;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid rgba(34,44,53,0.20);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+
+    &:hover, &:active, &:visited {
+      color: #000000;
+      text-decoration: none;
     }
   }
 }
@@ -231,6 +238,10 @@ nav.secondary {
 
   li {
     list-style: none;
+
+    &.accordion-heading {
+      padding-bottom: 0;
+    }
 
     &.accordion-heading:after {
       color: white;
@@ -288,4 +299,84 @@ nav.secondary {
 .main-content {
   @include span-columns(9);
   padding-right: 40px;
+}
+
+.line-height {
+  margin: auto;
+  width:658px;
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+
+.font-variations {
+
+  p {
+    font-size: 32px;
+    color: #000000;
+    letter-spacing: 2.8px;
+    line-height: 40px;
+  }
+
+  h4 {
+    font-family: OpenSans;
+    font-size: 14px;
+    color: rgba(34,44,53,0.60);
+    letter-spacing: 0.03px;
+  }
+
+  p:nth-child(2) {
+    font-family: OpenSans-Bold;
+  }
+
+  p:nth-child(4) {
+    font-family: OpenSans;
+  }
+
+  p:nth-child(6) {
+    font-family: OpenSans-Light;
+  }
+}
+
+.font-examples {
+
+  span {
+    font-size: 140px;
+    color: black;
+
+    &:first-child {
+      font-family: OpenSans-Bold;
+    }
+
+    &:nth-child(2){
+      font-family: OpenSans;
+      padding-left: 30px
+    }
+
+    &:nth-child(3){
+      font-family: OpenSans-Light;
+      padding-left: 30px
+    }
+  }
+}
+
+.display-type-1 {
+  font-family: OpenSans-Bold;
+  font-size: 58px;
+  color: #000000;
+  line-height: 68px;
+}
+
+.display-type-2 {
+  opacity: 0.93;
+  font-family: OpenSans;
+  font-size: 58px;
+  color: #000000;
+  line-height: 68px;
+}
+
+.display-type-heading {
+  font-family: OpenSans;
+  font-size: 36px;
+  color: #000000;
+  line-height: 40px;
 }

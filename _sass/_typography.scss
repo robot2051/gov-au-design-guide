@@ -1,6 +1,7 @@
 
 h1 {
   font-size: 48px;
+  font-size: 3.85vw;
   color: #232D35;
   letter-spacing: 0.36px;
   padding-top: 20px;
@@ -9,8 +10,11 @@ h1 {
 
 h2 {
   font-size: 36px;
+  font-size: 2.75vw;
   color: #53D4EF;
   letter-spacing: 0.23px;
+  margin-top: 28px;
+  margin-bottom: 18px;
 }
 
 hr {
@@ -19,4 +23,32 @@ hr {
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
+}
+
+blockquote {
+  font-family: OpenSans-Italic;
+  font-size: 22px;
+  font-size: 1.8vw;
+  color: #000000;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+  border-left: 2px solid #232D35;
+}
+
+ul, ol {
+  font-size: 16px;
+  font-size: 1.25vw;
+  color: #000000;
+  letter-spacing: 0.15px;
+  line-height: 24px;
+
+  li {
+    padding-bottom: 9px;
+  }
+}
+
+p {
+  margin-top: 15px;
+  font-size: 16px;
+  font-size: 1.25vw;
 }
