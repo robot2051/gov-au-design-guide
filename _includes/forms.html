@@ -1,0 +1,87 @@
+<h1>Components</h1>
+
+<hr>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed nisi varius, tristique velit sit amet, consectetur metus.</p>
+
+
+<form>
+  <h2 id="text-inputs">Text inputs and area</h2>
+  <p>
+    <label for="text_area">Text Area:</label>
+    <textarea id="text_area" placeholder="Input value"></textarea>
+  </p>
+
+  <p>
+    <label for="text_field">Text Field:</label>
+    <input type="text" id="text_field" />
+  </p>
+
+  <h2 id="dropdown">Dropdowns</h2>
+
+  <p>
+    <label for="select_element">Select Element:</label>
+    <select name="select_element">
+      <optgroup label="Option Group 1">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </optgroup>
+      <optgroup label="Option Group 2">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </optgroup>
+    </select>
+  </p>
+
+  <h2 id="date-input">Date input</h2>
+
+  <fieldset>
+    <p>
+      <label for="day">DD</label>
+      <input type="number" id="day"/>
+    </p>
+    <p>
+      <label for="month">MM</label>
+      <input type="number" id="month"/>
+    </p>
+    <p>
+      <label for="year">YYYY</label>
+      <input type="number" id="year"/>
+    </p>
+  </fieldset>
+
+  <h2 id="radio-buttons">Radio boxes</h2>
+  <p>
+    <legend class="hidden-text"> Do you plan to employ staff within the next 12 months?</legend>
+    <input id="yes" name="employees" type="radio" value="Yes" data-error-message="Please tell us if you plan to employ staff." data-error-message-holder="modifyErrorHolder" required />
+    <label for="yes">Yes</label>
+    <input id="no" name="employees" type="radio" value="No" />
+    <label for="no">No</label>
+    <input id="notSure" name="employees" type="radio" value="Not sure" />
+    <label for="notSure">Not sure</label>
+  </p>
+
+  <h2>Check boxes</h2>
+
+    <legend> How will your business trade?</legend>
+
+    <p>
+      <input id="online" name="source" type="checkbox" value="Online" />
+      <label for="online">Online</label>
+
+      <input id="shop" name="source" type="checkbox" value="In a shop" />
+      <label for="shop">Shop</label>
+
+      <input id="pop-up" name="source" type="checkbox" value="In a pop-up shop" />
+      <label for="pop-up">Pop-up shop</label>
+
+      <input id="home" name="source" type="checkbox" value="In a home office" />
+      <label for="home">Home</label>
+
+      <input id="office" name="source" type="checkbox" value="In a commercial office" />
+      <label for="office">Office</label>
+    </p>
+
+</form>

@@ -11,6 +11,10 @@
 @import "grid-settings";
 @import "neat";
 @import "grid";
+@import "accessibility";
+@import "forms";
+@import "typography";
+@import "code-syntax";
 // end imports
 
 // style guide index
@@ -22,14 +26,15 @@
   .row {
     margin-top: 51px;
   }
-}
 
-h1 {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 74px;
-  margin: 0;
-  padding-top: 179px;
+  h1 {
+    color: white;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 74px;
+    margin: 0;
+    padding-top: 179px;
+  }
 }
 
 small {
@@ -145,6 +150,7 @@ nav.primary {
       font-size: 16px;
       line-height: 65px;
       padding: 20px 40px;
+      text-decoration: none;
 
       &:hover {
         border-bottom: 4px solid #244A61;
@@ -184,6 +190,10 @@ nav.secondary {
 
       a {
         margin-left: 16px;
+        text-decoration: none;
+        &:hover, &:active, &:visited {
+          color: #000000;
+        }
       }
     }
   }
@@ -273,4 +283,9 @@ nav.secondary {
 .wrapper {
   margin: 0 auto;
   max-width: 64em;
+}
+
+.main-content {
+  @include span-columns(9);
+  padding-right: 40px;
 }
