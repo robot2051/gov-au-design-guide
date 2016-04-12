@@ -23,6 +23,7 @@
   background-image: linear-gradient(-134deg, #00BFE7 0%, #05E1F5 100%);
   color: white;
   height:calc(100vh - 80px);
+  padding:0 20px;
 
   .row {
     margin-top: 51px;
@@ -31,10 +32,13 @@
   h1 {
     color: white;
     font-size: 72px;
+    font-size: 6vw;
     font-weight: 700;
     line-height: 74px;
+    line-height: 6.3vw;
     margin: 0;
     padding-top: 179px;
+    padding-top: 25vh;
   }
 }
 
@@ -42,6 +46,7 @@ small {
   @include shift(3);
   @include span-columns(4);
   font-size: 14px;
+  font-size: 1.3vw;
   letter-spacing: 0.15px;
   margin-top: 12px;
   text-align: center;
@@ -49,7 +54,9 @@ small {
 
 p.index-description {
   font-size: 36px;
+  font-size: 3vw;
   line-height: 48px;
+  line-height: 3.2vw;
   margin: 0;
   padding-top: 9px;
 }
@@ -57,6 +64,8 @@ p.index-description {
 .button {
   border: none;
   height: 50px;
+  font-size: 16px;
+  font-size: 1.7vw;
   line-height: 50px;
   text-align: center;
   text-decoration: none;
@@ -79,7 +88,6 @@ p.index-description {
   background: #FFFFFF;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
   color: #000000;
-  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.18px;
   width: 324px;
@@ -99,6 +107,7 @@ header {
   background-color: #244A61;
   color: white;
   height: 80px;
+  padding:0 20px;
 
   .wrapper {
     & > * {
@@ -107,12 +116,15 @@ header {
 
     p {
       font-size: 24px;
+      font-size: 3vw;
       letter-spacing: 0px;
       line-height: 80px;
       margin: 0;
 
       &:last-child {
         padding-left: 94px;
+        padding-left: 14vw;
+
       }
     }
   }
@@ -120,6 +132,7 @@ header {
 
 #govau-logo {
   font-size: 40.5px;
+  font-size: 3.4vw;
 }
 
 #star {
