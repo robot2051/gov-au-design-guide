@@ -100,6 +100,8 @@ header {
   background-color: #244A61;
   color: white;
   height: 80px;
+  position: fixed;
+  width: 100%;
 
   .wrapper {
     & > * {
@@ -142,6 +144,9 @@ header {
 nav.primary {
   background: #F0F3F5;
   height: 65px;
+  position: fixed;
+  top: 80px;
+  width: 100%;
 
   .nav-link {
     display: inline-block;
@@ -176,7 +181,7 @@ nav.primary {
 nav.secondary {
   @include span-columns(3);
 
-  margin-top: 108px;
+  margin-top: 228px;
 
   ul {
     list-style: none;
@@ -304,6 +309,7 @@ nav.secondary {
 .main-content {
   @include span-columns(9);
   padding-right: 40px;
+  margin-top: 120px;
 }
 
 .line-height {
