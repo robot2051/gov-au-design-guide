@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% capture codeInfoPanelContent %}
+~~~
+{% include colours.html %}
+~~~
+{: .language-html}
+{% endcapture %}
+
+{% capture documentationInfoPanelContent %}
+{% include content/documentation/colours-documentation.md %}
+{% endcapture %}
+
+{% capture performanceInfoPanelContent %}
+{% include content/performance/colours-performance.md %}
+{% endcapture %}
+
+{% include navigation.html %}
+<div class="content">
+  {% include foundations-sidebar-nav.html %}
+  <div class="main-content">
+    {% include colours.html %}
+    {% include info-panel.html infoPanelHeading="Code" infoPanelContent=codeInfoPanelContent %}
+    {% include info-panel.html infoPanelHeading="Documentation" infoPanelContent=documentationInfoPanelContent %}
+    {% include info-panel.html infoPanelHeading="Performance" infoPanelContent=performanceInfoPanelContent %}
+  </div>
+</div>

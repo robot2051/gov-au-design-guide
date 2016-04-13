@@ -132,10 +132,11 @@ header {
 }
 
 #govau-logo {
+  color: #fff;
   font-size: 40.5px;
   font-size: 3.4vw;
   text-decoration: none;
-  color: #fff;
+
 }
 
 #star {
@@ -396,4 +397,61 @@ nav.secondary {
   font-size: 36px;
   color: #000000;
   line-height: 40px;
+}
+
+.colour-swatches {
+  @include outer-container;
+
+  .colour-swatch {
+    @include span-columns(2 of 9);
+
+    color: #000000;
+    background: #FFFFFF;
+    border: 1px solid #979797;
+    font-family: OpenSans-Bold;
+    font-size: 17px;
+    height: 100%;
+    margin-bottom: 20px;
+    min-height: 216px;
+    padding: 7px;
+
+    @include media($tablet) {
+      @include span-columns(3);
+    }
+
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+
+  .colour {
+    border: 1px solid #FFFFFF;
+    height: 126px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin:0;
+  }
+}
+
+$primary-colour: #225187;
+$secondary-colour: #3370B8;
+$low-light: #244A61;
+$high-light: #F0F3F5;
+$text-default-colour: #232D35;
+$secondary-brand-colour: #4891E2;
+$sucess-colour: #E4FDDD;
+$error-colour: #FADEDE;
+$secondary-contrast-colour: #6D6D6D;
+
+
+$color_names: 'primary-colour', 'secondary-colour', 'low-light', 'high-light', 'text-default-colour', 'secondary-brand-colour', 'sucess-colour', 'error-colour', 'secondary-contrast-colour';
+$color_vars: $primary-colour, $secondary-colour ,$low-light, $high-light, $text-default-colour, $secondary-brand-colour, $sucess-colour, $error-colour, $secondary-contrast-colour;
+
+@each $name in $color_names {
+  $i: index($color_names, $name);
+  .#{$name} {
+    background-color: nth($color_vars, $i);
+  }
 }
