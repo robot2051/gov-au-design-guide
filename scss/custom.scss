@@ -111,6 +111,7 @@ header {
   padding:0 20px;
   position: fixed;
   width: 100%;
+  z-index: 100;
 
   .wrapper {
     & > * {
@@ -160,6 +161,7 @@ nav.primary {
   position: fixed;
   top: 80px;
   width: 100%;
+  z-index: 100;
 
   .nav-link {
     display: inline-block;
