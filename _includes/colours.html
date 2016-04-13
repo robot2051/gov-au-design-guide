@@ -1,28 +1,79 @@
----
-layout: default
----
-{% capture codeInfoPanelContent %}
-~~~
-{% include colours.html %}
-~~~
-{: .language-html}
-{% endcapture %}
 
-{% capture documentationInfoPanelContent %}
-{% include content/documentation/colours-documentation.md %}
-{% endcapture %}
 
-{% capture performanceInfoPanelContent %}
-{% include content/performance/colours-performance.md %}
-{% endcapture %}
+<h1>Colours</h1>
 
-{% include navigation.html %}
-<div class="content">
-  {% include foundations-sidebar-nav.html %}
-  <div class="main-content">
-    {% include colours.html %}
-    {% include info-panel.html infoPanelHeading="Code" infoPanelContent=codeInfoPanelContent %}
-    {% include info-panel.html infoPanelHeading="Documentation" infoPanelContent=documentationInfoPanelContent %}
-    {% include info-panel.html infoPanelHeading="Performance" infoPanelContent=performanceInfoPanelContent %}
+<hr>
+
+<p>This color palette to communicates meaning, convey visual differentiation, and provide a consistent look and feel. Each colour is chosen to fit into the overall visual language and promote a warmth and trustworthiness while meeting the highest standards of color contrast requirements.</p>
+
+<h2>Overview</h2>
+<p>This 12-column, responsive grid provides structure for website content. We use a flexible grid that has percentage-based columns, fixed margins and gutters. The columns are used to adjust the layout, making the best use of the space available.</p>
+
+<h2>Primary Colours</h2>
+
+<p>This palette’s primary colors are blue, gray, and white. Blue is commonly associated with trust, confidence, and sincerity; it is also used to represent calmness and responsibility.</p>
+
+<div class="colour-swatches">
+  <div class="colour-swatch">
+    <div class="colour primary-colour">
+    </div>
+    <p>#225187</p>
+    <p>$primary-colour</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour secondary-colour">
+    </div>
+    <p>#3370B8</p>
+    <p>$secondary-colour</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour low-light">
+    </div>
+    <p>#244A61</p>
+    <p>$low-light</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour high-light">
+    </div>
+    <p>#F0F3F5</p>
+    <p>$high-light</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour text-default-colour">
+    </div>
+    <p>#232D35</p>
+    <p>$text-default-colour</p>
+  </div>
+</div>
+
+<h2>Secondary Colours</h2>
+
+<p>This palette’s primary colors are blue, gray, and white. Blue is commonly associated with trust, confidence, and sincerity; it is also used to represent calmness and responsibility.</p>
+
+<div class="colour-swatches">
+
+  <div class="colour-swatch">
+    <div class="colour secondary-brand-colour">
+    </div>
+    <p>#4891E2</p>
+    <p>$secondary-brand-colour</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour sucess-colour">
+    </div>
+    <p>#E4FDDD</p>
+    <p>$sucess-colour</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour error-colour">
+    </div>
+    <p>#FADEDE</p>
+    <p>$error-colour</p>
+  </div>
+  <div class="colour-swatch">
+    <div class="colour secondary-contrast-colour">
+    </div>
+    <p>#6D6D6D</p>
+    <p>$secondary-contrast-colour</p>
   </div>
 </div>
