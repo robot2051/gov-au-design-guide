@@ -173,6 +173,15 @@ nav.primary {
   }
 }
 
+.current {
+  background: rgba(155,154,155,0.08);
+
+  a {
+    border-bottom: 4px solid #244A61;
+    text-shadow: 1px 0 0 black;
+  }
+}
+
 .navigation-menu {
   margin: 0;
 }
