@@ -314,6 +314,10 @@ nav.secondary {
   margin-top: 120px;
 }
 
+.content {
+  @include outer-container;
+}
+
 .line-height {
   margin: auto;
   width:658px;
