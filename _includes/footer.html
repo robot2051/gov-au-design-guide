@@ -2,6 +2,14 @@
 
 <!--CUSTOM SCRIPTS -->
 <script src="{{ "/js/accordion.js" | prepend: site.baseurl }}"></script>
+
 <script>
-    smoothScroll.init();
+  smoothScroll.init();
+
+  var $links = $('.navigation-menu li');
+  $links.click(function(){
+    $links.removeClass('current');
+    $(this).addClass('current');
+  });
+
 </script>
