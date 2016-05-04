@@ -241,7 +241,6 @@ nav.primary {
   }
 
   ul.centered-navigation-menu {
-    //@extend .wrapper;
     clear: both;
     display: none;
     margin: 0 auto;
@@ -250,6 +249,8 @@ nav.primary {
     width: 100%;
     z-index: 99999;
     -webkit-padding-start: 0;
+    margin: 0 auto;
+    max-width: 64em;
 
     &.show {
       display: block;
