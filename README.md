@@ -4,7 +4,7 @@ A Repository for the elements, components and patterns of the DTO. It is both a 
 
 It is very much a **work-in-progress** and not ready for general use.
 
-It can be accessed at https://universal-design-guide.apps.staging.digital.gov.au/
+It can be accessed at https://gov-au-design-guide.apps.staging.digital.gov.au/
 
 This will remain **password protected** until the design guide is ready for general release.
 
