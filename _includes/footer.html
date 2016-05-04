@@ -7,10 +7,11 @@
 <script>
   smoothScroll.init();
 
-  var $links = $('.navigation-menu li');
-  $links.click(function(){
-    $links.removeClass('current');
-    $(this).addClass('current');
+$( document ).ready(function() {
+  $(function() {
+    var $link = $('nav a[href^="/' + location.pathname.split("/")[1] + '"]')
+    $link.parent('li').addClass('current');
   });
+});
 
 </script>
