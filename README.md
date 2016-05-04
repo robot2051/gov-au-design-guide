@@ -21,8 +21,8 @@ The Design Guide uses [Jekyll](http://jekyllrb.com/). You will need to have [rbe
 Setup locally
 
 ```
-git clone https://github.com/AusDTO/universal-design-guide.git
-cd universal-design-guide
+git clone https://github.com/AusDTO/gov-au-design-guide.git
+cd gov-au-design-guide
 gem install bundler
 bundle install
 ```
