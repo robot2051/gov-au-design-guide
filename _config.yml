@@ -10,7 +10,7 @@ title: Design Guide
 email: admin@digital.gov.au
 description: Design Guide
 baseurl: "" # the subpath of your site, e.g. /blog
-url: 'http://universal-design-guide.apps.staging.digital.gov.au' # the base hostname & protocol for your site
+url: 'http://gov-au-design-guide.apps.staging.digital.gov.au' # the base hostname & protocol for your site
 
 gems: [bourbon, neat]
 
@@ -28,7 +28,7 @@ assets:
 
 prose:
   rooturl: '_includes/content'
-  siteurl: 'http://universal-design-guide.apps.staging.digital.gov.au/'
+  siteurl: 'http://gov-au-design-guide.apps.staging.digital.gov.au/'
   ignore:
     - _config.yml
     - /_assets
