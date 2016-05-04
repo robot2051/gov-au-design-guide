@@ -1,6 +1,8 @@
 # GOV.AU Design Guide
 
-A Repository for the elements, components and patterns of the DTO. It is both a guide to the design patterns to be used in GOV.AU, with guidance on the formatting of HTML for particular design elements as well as CSS that makes it very easy to create an application that follows the visual design of GOV.AU.
+A Repository for the elements, components and patterns for GOV.AU.
+
+It is both a guide to the design patterns to be used in GOV.AU, with guidance on the formatting of HTML for particular design elements as well as CSS that makes it very easy to create an application that follows the visual design of GOV.AU.
 
 It is very much a **work-in-progress** and not ready for general use.
 
