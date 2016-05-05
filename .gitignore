@@ -3,3 +3,4 @@ _site
 .sass-cache
 .jekyll-metadata
 _sass/bourbon
+.DS_Store
