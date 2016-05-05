@@ -203,8 +203,9 @@ nav.secondary {
     li.nav-item {
       border-left: 2px solid white;
       border-top: 1px solid rgba(34,44,53,0.20);
-      height: 48px;
-      line-height: 48px;
+      //height: 48px;
+      line-height: 1.8;
+      padding-top: 0.75em;
       padding-left: 16px;
 
       &:hover, &:active {
