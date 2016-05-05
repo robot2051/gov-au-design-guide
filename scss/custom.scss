@@ -325,6 +325,14 @@ nav.secondary {
   @include span-columns(9);
   padding-right: 40px;
   margin-top: 120px;
+
+  h2:before {
+    display: block;
+    content: " ";
+    margin-top: -195px;
+    height: 185px;
+    visibility: hidden;
+  }
 }
 
 .content {
