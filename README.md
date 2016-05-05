@@ -6,7 +6,7 @@ It is both a guide to the design patterns to be used in GOV.AU, with guidance on
 
 It is very much a **work-in-progress** and not ready for general use.
 
-It can be accessed at https://gov-au-design-guide.apps.staging.digital.gov.au/
+It can be accessed at http://gov-au-design-guide.apps.staging.digital.gov.au/
 
 This will remain **password protected** until the design guide is ready for general release.
 
