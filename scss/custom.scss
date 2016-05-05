@@ -96,8 +96,11 @@ p.index-description {
 // end style guide index
 
 // style guide header
+
+$dto-colour: #015a96;
+
 header {
-  background-color: #244A61;
+  background-color: $dto-colour;
   color: white;
   height: 80px;
   position: fixed;
@@ -114,10 +117,6 @@ header {
       letter-spacing: 0px;
       line-height: 80px;
       margin: 0;
-
-      &:last-child {
-        padding-left: 94px;
-      }
     }
   }
 }
@@ -138,6 +137,10 @@ header {
   position: relative;
   top: 14px;
   width: 53px;
+
+  & + p {
+    padding-left: 94px;
+  }
 }
 // end style guide header
 
