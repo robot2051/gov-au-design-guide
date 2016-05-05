@@ -471,12 +471,3 @@ $color_vars: $primary-colour, $secondary-colour ,$low-light, $high-light, $text-
     background-color: nth($color_vars, $i);
   }
 }
-
-
-h2:before {
-  display: block;
-  content: " ";
-  margin-top: -285px;
-  height: 285px;
-  visibility: hidden;
-}
