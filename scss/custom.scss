@@ -193,6 +193,18 @@ nav.primary {
     text-shadow: 1px 0 0 black;
     background: rgba(155,154,155,0.08);
   }
+
+  @include media (max-width 53.75em) {
+    border-bottom: 4px solid #244A61;
+    text-shadow: 1px 0 0 black;
+    background: rgba(155,154,155,0.08);
+
+    a {
+      border-bottom: transparent;
+      text-shadow: 1px 0 0 transparent;
+      background: transparent;
+    }
+  }
 }
 
 .navigation-menu {
