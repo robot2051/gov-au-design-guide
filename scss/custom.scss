@@ -148,6 +148,7 @@ header {
 // end style guide header
 
 // style guide navigation
+
 nav.primary {
   background: #F0F3F5;
   height: 65px;
@@ -185,10 +186,15 @@ nav.primary {
     }
   }
 
+  @include media (max-width $large-screen) {
+    .nav-link:not(.current){
+      background: #F0F3F5;
+    }
+  }
+  
   .nav-link {
     display: inline-block;
     padding-bottom: 0;
-    background: #F0F3F5;
     display: block;
     overflow: hidden;
     text-align: right;
@@ -197,11 +203,13 @@ nav.primary {
 
     @include media($large-screen) {
       display: inline;
-      margin-left: -5px;
-      background: transparent;
+      margin-left: -3px;
     }
 
     @include media (max-width $large-screen) {
+      &:not(.current){
+        border-bottom: 4px solid transparent;
+      }
       &:hover {
         border-bottom: 4px solid #244A61;
         background: darken(#F0F3F5, 3%);
@@ -242,7 +250,7 @@ nav.primary {
   @include media (max-width $large-screen) {
     border-bottom: 4px solid #244A61;
     text-shadow: 1px 0 0 black;
-    background: rgba(155,154,155,0.08);
+    background: darken(#F0F3F5, 3%);
 
     a {
       border-bottom: transparent;
