@@ -19,6 +19,8 @@
 @import "colours";
 // end imports
 
+$large-screen: 53.75em !default;
+
 // style guide index
 .ugd-into {
   background-image: linear-gradient(-134deg, #00BFE7 0%, #05E1F5 100%);
@@ -147,10 +149,6 @@ header {
 
 // style guide navigation
 nav.primary {
-  @include media(max-width 53.75em) {
-    background: transparent;
-  }
-
   background: #F0F3F5;
   height: 65px;
   position: fixed;
@@ -158,11 +156,52 @@ nav.primary {
   width: 100%;
   z-index: 100;
 
+  @include media(max-width $large-screen) {
+    background: transparent;
+  }
+
+  ul {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    width: 100%;
+    z-index: 99999;
+    -webkit-padding-start: 0;
+    margin: 0 auto;
+    max-width: 64em;
+
+    &.show {
+      display: block;
+    }
+
+    @include media ($large-screen) {
+      display: block;
+    }
+
+    @include media (max-width $large-screen) {
+      max-width:100%;
+    }
+  }
+
   .nav-link {
     display: inline-block;
     padding-bottom: 0;
+    background: #F0F3F5;
+    display: block;
+    overflow: hidden;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
 
-    @include media (max-width 53.75em) {
+    @include media($large-screen) {
+      display: inline;
+      margin-left: -5px;
+      background: transparent;
+    }
+
+    @include media (max-width $large-screen) {
       &:hover {
         border-bottom: 4px solid #244A61;
         background: darken(#F0F3F5, 3%);
@@ -175,14 +214,14 @@ nav.primary {
       line-height: 65px;
       padding: 20px 40px;
       text-decoration: none;
-      
-      @include media (max-width 53.75em) {
+
+      @include media (max-width $large-screen) {
         width: 130px;
         padding-left: calc(100vw - 130px);
       }
 
 
-      @include media (min-width 53.75em) {
+      @include media (min-width $large-screen) {
         &:hover {
           border-bottom: 4px solid #244A61;
           text-shadow: 1px 0 0 black;
@@ -200,7 +239,7 @@ nav.primary {
     background: rgba(155,154,155,0.08);
   }
 
-  @include media (max-width 53.75em) {
+  @include media (max-width $large-screen) {
     border-bottom: 4px solid #244A61;
     text-shadow: 1px 0 0 black;
     background: rgba(155,154,155,0.08);
@@ -217,12 +256,12 @@ nav.primary {
   margin: 0;
 }
 
-.centered-navigation {
-  $large-screen: 53.75em !default;
-  $centered-navigation-height: 60px;
-  $horizontal-bar-mode: $large-screen;
+.navigation-wrapper {
+  position: relative;
+  top: 6px;
+  z-index: 999;
 
-  .centered-navigation-mobile-menu {
+  .mobile-menu {
     color: #fff;
     display: block;
     float: right;
@@ -232,60 +271,8 @@ nav.primary {
     text-decoration: none;
     font-size: 24px;
 
-    @include media ($horizontal-bar-mode) {
+    @include media ($large-screen) {
       display: none;
-    }
-  }
-
-  // Nav menu
-
-  .centered-navigation-wrapper {
-    position: relative;
-    top: 6px;
-    z-index: 999;
-  }
-
-  ul.centered-navigation-menu {
-    clear: both;
-    display: none;
-    margin: 0 auto;
-    overflow: visible;
-    -webkit-transform-style: preserve-3d; // stop webkit flicker
-    width: 100%;
-    z-index: 99999;
-    -webkit-padding-start: 0;
-    margin: 0 auto;
-    max-width: 64em;
-
-    &.show {
-      display: block;
-    }
-
-    @include media ($horizontal-bar-mode) {
-      display: block;
-    }
-
-    @include media (max-width $horizontal-bar-mode) {
-      max-width:100%;
-    }
-  }
-
-  // The nav items
-
-  ul li.nav-link {
-    background: #F0F3F5;
-    display: block;
-    line-height: $centered-navigation-height;
-    overflow: hidden;
-    text-align: right;
-    width: 100%;
-    z-index: 9999;
-
-    @include media($horizontal-bar-mode) {
-      display: inline;
-      line-height: $centered-navigation-height;
-      margin-left: -5px;
-      background: transparent;
     }
   }
 }
@@ -577,19 +564,8 @@ nav.secondary {
   }
 }
 
-$primary-colour: #225187;
-$secondary-colour: #3370B8;
-$low-light: #244A61;
-$high-light: #F0F3F5;
-$text-default-colour: #232D35;
-$secondary-brand-colour: #4891E2;
-$sucess-colour: #E4FDDD;
-$error-colour: #FADEDE;
-$secondary-contrast-colour: #6D6D6D;
-
-
-$color_names: 'primary-colour', 'secondary-colour', 'low-light', 'high-light', 'text-default-colour', 'secondary-brand-colour', 'sucess-colour', 'error-colour', 'secondary-contrast-colour';
-$color_vars: $primary-colour, $secondary-colour ,$low-light, $high-light, $text-default-colour, $secondary-brand-colour, $sucess-colour, $error-colour, $secondary-contrast-colour;
+$color_names: 'primary-colour', 'secondary-colour', 'low-light-colour', 'high-light-colour', 'text-default-colour', 'secondary-brand-colour', 'sucess-colour', 'error-colour', 'secondary-contrast-colour';
+$color_vars: $primary-colour, $secondary-colour ,$low-light-colour, $high-light-colour, $text-default-colour, $secondary-brand-colour, $sucess-colour, $error-colour, $secondary-contrast-colour;
 
 @each $name in $color_names {
   $i: index($color_names, $name);
