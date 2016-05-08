@@ -284,6 +284,8 @@ nav.primary {
     @include media($horizontal-bar-mode) {
       display: inline;
       line-height: $centered-navigation-height;
+      margin-left: -5px;
+      background: transparent;
     }
   }
 }
