@@ -270,6 +270,9 @@ nav.primary {
     padding-right: 15px;
     text-decoration: none;
     font-size: 24px;
+    position: fixed;
+    right: 15px;
+    top: 6px;
 
     @include media ($large-screen) {
       display: none;
