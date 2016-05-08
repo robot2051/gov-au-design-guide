@@ -175,6 +175,12 @@ nav.primary {
       line-height: 65px;
       padding: 20px 40px;
       text-decoration: none;
+      
+      @include media (max-width 53.75em) {
+        width: 130px;
+        padding-left: calc(100vw - 130px);
+      }
+
 
       @include media (min-width 53.75em) {
         &:hover {
