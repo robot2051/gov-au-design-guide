@@ -19,6 +19,8 @@
 @import "colours";
 // end imports
 
+$large-screen: 53.75em !default;
+
 // style guide index
 .ugd-into {
   background-image: linear-gradient(-134deg, #00BFE7 0%, #05E1F5 100%);
@@ -42,6 +44,7 @@
 small {
   @include shift(3);
   @include span-columns(4);
+
   font-size: 14px;
   letter-spacing: 0.15px;
   margin-top: 12px;
@@ -66,6 +69,7 @@ p.index-description {
 
 .button-blue {
   @include span-columns(3);
+
   background: #244A61;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
   color: white;
@@ -77,6 +81,7 @@ p.index-description {
 
 .button.button-download {
   @include span-columns(4);
+
   background: #FFFFFF;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50);
   color: #000000;
@@ -125,7 +130,6 @@ header {
   color: #fff;
   font-size: 40.5px;
   text-decoration: none;
-
 }
 
 #star {
@@ -145,6 +149,7 @@ header {
 // end style guide header
 
 // style guide navigation
+
 nav.primary {
   background: #F0F3F5;
   height: 65px;
@@ -153,12 +158,63 @@ nav.primary {
   width: 100%;
   z-index: 100;
 
+  @include media(max-width $large-screen) {
+    background: transparent;
+  }
+
+  ul {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    max-width: 64em;
+    overflow: visible;
+    -webkit-padding-start: 0;
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    width: 100%;
+    z-index: 99999;
+
+    &.show {
+      display: block;
+    }
+
+    @include media ($large-screen) {
+      display: block;
+    }
+
+    @include media (max-width $large-screen) {
+      max-width:100%;
+    }
+  }
+
+  @include media (max-width $large-screen) {
+    .nav-link:not(.current) {
+      background: #F0F3F5;
+    }
+  }
+
   .nav-link {
     display: inline-block;
+    display: block;
+    overflow: hidden;
     padding-bottom: 0;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
 
-    &:hover {
-      background: rgba(155,154,155,0.08);
+    @include media($large-screen) {
+      display: inline;
+      margin-left: -0.5%;
+    }
+
+    @include media (max-width $large-screen) {
+      &:not(.current){
+        border-bottom: 4px solid transparent;
+      }
+
+      &:hover {
+        background: darken(#F0F3F5, 3%);
+        border-bottom: 4px solid #244A61;
+      }
     }
 
     a {
@@ -168,34 +224,82 @@ nav.primary {
       padding: 20px 40px;
       text-decoration: none;
 
-      &:hover {
-        border-bottom: 4px solid #244A61;
-        text-shadow: 1px 0 0 black;
+      @include media (max-width $large-screen) {
+        padding-left: calc(100vw - 130px);
+        width: 130px;
+      }
+
+
+      @include media (min-width $large-screen) {
+        &:hover {
+          background: darken(#F0F3F5, 3%);
+          border-bottom: 4px solid #244A61;
+          text-shadow: 1px 0 0 black;
+        }
       }
     }
   }
 }
 
 .current {
-  background: rgba(155,154,155,0.08);
-
   a {
+    background: rgba(155,154,155,0.08);
     border-bottom: 4px solid #244A61;
     text-shadow: 1px 0 0 black;
+  }
+
+  @include media (max-width $large-screen) {
+    background: darken(#F0F3F5, 3%);
+    border-bottom: 4px solid #244A61;
+    text-shadow: 1px 0 0 black;
+
+    a {
+      background: transparent;
+      border-bottom: transparent;
+      text-shadow: 1px 0 0 transparent;
+    }
   }
 }
 
 .navigation-menu {
   margin: 0;
 }
+
+.navigation-wrapper {
+  position: relative;
+  top: 6px;
+  z-index: 999;
+
+  .mobile-menu {
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 24px;
+    line-height: 80px;
+    margin: 0;
+    padding-right: 15px;
+    position: fixed;
+    right: 15px;
+    text-decoration: none;
+    top: 6px;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+  }
+}
+
 // end style guide navigation
 
 // style guide secondary navigation
 
 nav.secondary {
   @include span-columns(3);
-
   margin-top: 228px;
+
+  @media (max-width: 999px) {
+    display: none;
+  }
 
   ul {
     list-style: none;
@@ -203,7 +307,6 @@ nav.secondary {
     li.nav-item {
       border-left: 2px solid white;
       border-top: 1px solid rgba(34,44,53,0.20);
-      //height: 48px;
       line-height: 1.8;
       padding-top: 0.75em;
       padding-left: 16px;
@@ -319,12 +422,19 @@ nav.secondary {
 .wrapper {
   margin: 0 auto;
   max-width: 64em;
+
+  @media (max-width: 999px) {
+    margin: 0 15px 0 15px;
+  }
 }
 
 .main-content {
   @include span-columns(9);
-  padding-right: 40px;
   margin-top: 120px;
+
+  @include media(max-width 53.75em) {
+    margin-top: 0;
+  }
 
   h2:before {
     display: block;
@@ -332,6 +442,16 @@ nav.secondary {
     margin-top: -195px;
     height: 185px;
     visibility: hidden;
+
+    @media (max-width: 999px) {
+      @include span-columns(12);
+      margin-left: 15px;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -455,19 +575,8 @@ nav.secondary {
   }
 }
 
-$primary-colour: #225187;
-$secondary-colour: #3370B8;
-$low-light: #244A61;
-$high-light: #F0F3F5;
-$text-default-colour: #232D35;
-$secondary-brand-colour: #4891E2;
-$sucess-colour: #E4FDDD;
-$error-colour: #FADEDE;
-$secondary-contrast-colour: #6D6D6D;
-
-
-$color_names: 'primary-colour', 'secondary-colour', 'low-light', 'high-light', 'text-default-colour', 'secondary-brand-colour', 'sucess-colour', 'error-colour', 'secondary-contrast-colour';
-$color_vars: $primary-colour, $secondary-colour ,$low-light, $high-light, $text-default-colour, $secondary-brand-colour, $sucess-colour, $error-colour, $secondary-contrast-colour;
+$color_names: 'primary-colour', 'secondary-colour', 'low-light-colour', 'high-light-colour', 'text-default-colour', 'secondary-brand-colour', 'sucess-colour', 'error-colour', 'secondary-contrast-colour';
+$color_vars: $primary-colour, $secondary-colour ,$low-light-colour, $high-light-colour, $text-default-colour, $secondary-brand-colour, $sucess-colour, $error-colour, $secondary-contrast-colour;
 
 @each $name in $color_names {
   $i: index($color_names, $name);

@@ -2,14 +2,16 @@
 
 <!--CUSTOM SCRIPTS -->
 <script src="{{ "/js/accordion.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/primary-nav.js" | prepend: site.baseurl }}"></script>
 
 <script>
   smoothScroll.init();
 
-  var $links = $('.navigation-menu li');
-  $links.click(function(){
-    $links.removeClass('current');
-    $(this).addClass('current');
+$( document ).ready(function() {
+  $(function() {
+    var $link = $('nav a[href^="/' + location.pathname.split("/")[1] + '"]')
+    $link.parent('li').addClass('current');
   });
+});
 
 </script>
