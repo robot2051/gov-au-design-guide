@@ -459,6 +459,14 @@ nav.secondary {
   @include outer-container;
 }
 
+.entry {
+  margin-bottom: 2em;
+
+  h2 {
+    font-weight: normal;
+  }
+}
+
 .line-height {
   margin: auto;
   width:658px;
