@@ -14,7 +14,7 @@ url: 'http://gov-au-design-guide.apps.staging.digital.gov.au' # the base hostnam
 
 gems: [bourbon, neat]
 
-exclude: ['README.markdown', 'Gemfile', 'Gemfile.lock']
+exclude: ['README.markdown', 'Gemfile', 'Gemfile.lock', 'vendor/']
 
 markdown: kramdown
 
