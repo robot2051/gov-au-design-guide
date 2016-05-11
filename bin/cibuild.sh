@@ -4,8 +4,10 @@
 set -eo pipefail
 
 # Setup Ruby
+if [ -z "$CIRCLECI" ]; then
 curl -s -o use-ruby https://repository-cloudbees.forge.cloudbees.com/distributions/ci-addons/ruby/use-ruby
 RUBY_VERSION=$(cat .ruby-version) . ./use-ruby
+fi
 gem install --conservative bundler
 bundle install
 
