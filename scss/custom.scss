@@ -319,17 +319,34 @@ nav.secondary {
         text-shadow: 1px 0 0 black;
       }
     }
+
+    li.nav-item:not(.is-expanded ) {
+      &:hover, &:active {
+        background: transparent;
+        border-left: 2px solid transparent;
+        text-shadow: 1px 0 0 transparent;
+      }
+    }
+  }
+
+  .submenu {
+    display: none;
   }
 
   ul.sub-nav {
     padding-left: 0;
 
-    li {
+    li.nav-item {
       padding-left: 35px;
-    }
+      border-left: 2px solid transparent;
 
-    &:last-child {
-      border-bottom: 1px solid rgba(34,44,53,0.20);
+      &:hover, &:active {
+        background: #F0F3F5;
+        border-left: 2px solid black;
+        color: #000000;
+        letter-spacing: 0.07px;
+        text-shadow: 1px 0 0 black;
+      }
     }
   }
 
@@ -342,6 +359,11 @@ nav.secondary {
       text-decoration: none;
     }
   }
+}
+
+.is-expanded {
+  display: block;
+  padding-bottom: 0;
 }
 // end style guide secondary navigation
 
